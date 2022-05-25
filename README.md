@@ -1,4 +1,4 @@
-# my-project
+# Vue - Task Manager
 
 ## Project setup
 ```
