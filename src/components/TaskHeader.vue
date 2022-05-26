@@ -1,7 +1,8 @@
 <template>
   <header>
     <h1>Task Manager</h1>
-    <TaskButton buttonText="Add Task" class="button-default" />
+    <TaskButton @btn-click="$emit('toggle-add-task')" :buttonText="showAddTask ? 'Close' : 'Add Task'"
+      class="button-default" />
   </header>
 </template>
 
@@ -14,9 +15,8 @@ export default {
     TaskButton,
   },
   props: {
-    title: {
-      type: String,
-    },
+    title: String,
+    showAddTask: Boolean
   },
 }
 </script>

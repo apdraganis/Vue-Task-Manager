@@ -1,5 +1,5 @@
 <template>
-  <button>{{ buttonText }}</button>
+  <button @click="onClick">{{ buttonText }}</button>
 </template>
 
 <script>
@@ -12,6 +12,11 @@ export default {
       type: String,
     },
   },
+  methods: {
+    onClick() {
+      this.$emit('btn-click')
+    }
+  }
 }
 </script>
 
