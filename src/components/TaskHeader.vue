@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Task Manager says {{ title }}</h1>
+    <h1>Task Manager</h1>
     <TaskButton buttonText="Add Task" class="button-default" />
   </header>
 </template>
@@ -27,5 +27,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  border-bottom: 1px solid black;
 }
 </style>
