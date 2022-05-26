@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <TaskHeader title="hello" />
-    <AddTask />
+    <TaskHeader @toggle-add-task="toggleAddTask" title="hello" :showAddTask="showAddTask" />
+    <div v-show="showAddTask">
+      <AddTask @add-task="addTask" />
+    </div>
     <TaskList @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
   </div>
 </template>
@@ -21,9 +23,16 @@ export default {
   data() {
     return {
       tasks: [],
+      showAddTask: false
     }
   },
   methods: {
+    toggleAddTask() {
+      this.showAddTask = !this.showAddTask
+    },
+    addTask(newTask) {
+      this.tasks = [...this.tasks, newTask]
+    },
     deleteTask(id) {
       if (confirm('Are you sure?')) {
         this.tasks = this.tasks.filter((task) => task.id !== id)
