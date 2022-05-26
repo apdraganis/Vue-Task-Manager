@@ -1,5 +1,5 @@
 <template>
-  <button>{{ buttonText }}</button>
+  <button @click="onClick()">{{ buttonText }}</button>
 </template>
 
 <script>
@@ -10,6 +10,11 @@ export default {
   props: {
     buttonText: {
       type: String,
+    },
+  },
+  methods: {
+    onClick() {
+      console.log('Clicked!');
     },
   },
 }

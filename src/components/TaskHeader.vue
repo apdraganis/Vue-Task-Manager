@@ -2,7 +2,6 @@
   <header>
     <h1>Task Manager says {{ title }}</h1>
     <TaskButton buttonText="Add Task" class="button-default" />
-    <TaskButton buttonText="Delete Task" class="button-delete" />
   </header>
 </template>
 
