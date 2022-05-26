@@ -4,7 +4,7 @@
       <h3 @dblclick="$emit('toggle-priority', task.id)" :class="task.priority === true ? 'priority-task' : ''">{{
           task.text
       }}</h3>
-      <p>{{ task.deadline }}</p>
+      <p>Deadline: {{ task.deadline }}</p>
     </div>
     <div class="btns">
       <TaskButton class="button-default" buttonText='Update Task' />
