@@ -63,10 +63,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 
 .container {
-  border: 1px solid black;
+  width: 500px;
+  height: fit-content;
+  margin: auto;
+  padding: 10px 20px;
 }
 </style>
 
