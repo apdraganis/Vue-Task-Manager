@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <TaskHeader title="hello" />
+    <AddTask />
     <TaskList @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
   </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import TaskHeader from './components/TaskHeader.vue';
 import TaskList from './components/TaskList.vue';
+import AddTask from './components/AddTask.vue';
 
 export default {
   name: 'App',
   components: {
     TaskHeader,
     TaskList,
+    AddTask
   },
   data() {
     return {
@@ -73,5 +76,3 @@ export default {
   padding: 10px 20px;
 }
 </style>
-
-
