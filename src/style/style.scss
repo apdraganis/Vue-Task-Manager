@@ -1,0 +1,28 @@
+$default-button-color: rgba(132, 132, 255, 0.658);
+$hover-default-button-color: rgba(132, 132, 255, 0.849);
+$delete-button-color: rgb(255, 19, 19);
+$hover-delete-button-color: rgba(255, 19, 19, 0.74);
+
+.button-default {
+  background: $default-button-color;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.button-default:hover {
+  background: $hover-default-button-color;
+}
+
+.button-delete {
+  background: $delete-button-color;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.button-delete:hover {
+  background: $hover-delete-button-color;
+}

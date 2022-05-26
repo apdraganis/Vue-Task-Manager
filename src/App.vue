@@ -1,20 +1,21 @@
 <template>
-  <h1>Task Manager</h1>
-  <HelloWorld />
+  <div class="container">
+    <TaskHeader title="hello" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TaskHeader from './components/TaskHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    TaskHeader,
+  },
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +23,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.container {
+  border: 1px solid black;
 }
 </style>
 
