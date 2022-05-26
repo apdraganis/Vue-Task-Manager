@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <TaskHeader title="hello" />
-    <TaskList v-bind:tasks="tasks" />
+    <TaskList @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
   </div>
 </template>
 
@@ -20,22 +20,35 @@ export default {
       tasks: [],
     }
   },
+  methods: {
+    deleteTask(id) {
+      if (confirm('Are you sure?')) {
+        this.tasks = this.tasks.filter((task) => task.id !== id)
+      }
+    },
+    togglePriority(id) {
+      this.tasks = this.tasks.map((task) => task.id === id ? { ...task, priority: !task.priority } : task)
+    }
+  },
   created() {
     this.tasks = [
       {
         id: 1,
         text: 'Study for exams',
-        day: 'May 27th',
+        deadline: 'May 27th',
+        priority: false
       },
       {
         id: 2,
         text: 'Work on vue.js project',
-        day: 'June 1st',
+        deadline: 'June 1st',
+        priority: true
       },
       {
         id: 3,
         text: 'Arrange dentist appointment',
-        day: 'May 27th',
+        deadline: 'May 27th',
+        priority: true
       }
     ]
   }

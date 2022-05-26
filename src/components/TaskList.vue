@@ -1,6 +1,7 @@
 <template>
   <div v-for="task in tasks" v-bind:key="task.id">
-    <TaskItem v-bind:task='task' />
+    <TaskItem @toggle-priority="$emit('toggle-priority', task.id)" @delete-task="$emit('delete-task', task.id)"
+      v-bind:task='task' />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ export default {
   props: {
     tasks: Array,
   },
-  components: { TaskItem }
+  components: { TaskItem },
+  emits: ['delete-task', 'toggle-priority']
 }
 </script>
