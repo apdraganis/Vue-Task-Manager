@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "text": "Study for exams",
+      "deadline": "May 27th",
+      "priority": false
+    },
+    {
+      "id": "2",
+      "text": "Work on vue.js project",
+      "deadline": "June 1st",
+      "priority": true
+    },
+    {
+      "id": "3",
+      "text": "Arrange dentist appointment",
+      "deadline": "May 27th",
+      "priority": true
+    }
+  ]
+}
