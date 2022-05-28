@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <TaskHeader @toggle-add-task="toggleAddTask" title="hello" :showAddTask="showAddTask" />
+    <TaskHeader @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" />
     <div v-show="showAddTask">
       <AddTask @add-task="addTask" />
     </div>
@@ -40,30 +40,16 @@ export default {
     },
     togglePriority(id) {
       this.tasks = this.tasks.map((task) => task.id === id ? { ...task, priority: !task.priority } : task)
+    },
+    async fetchTasks() {
+      const response = await fetch('http://localhost:5000/tasks');
+      const data = await response.json();
+      return data;
     }
   },
-  created() {
-    this.tasks = [
-      {
-        id: 1,
-        text: 'Study for exams',
-        deadline: 'May 27th',
-        priority: false
-      },
-      {
-        id: 2,
-        text: 'Work on vue.js project',
-        deadline: 'June 1st',
-        priority: true
-      },
-      {
-        id: 3,
-        text: 'Arrange dentist appointment',
-        deadline: 'May 27th',
-        priority: true
-      }
-    ]
-  }
+  async created() {
+    this.tasks = await this.fetchTasks();
+  },
 }
 </script>
 
