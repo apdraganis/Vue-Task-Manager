@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>Task Manager</h1>
-    <TaskButton @btn-click="$emit('toggle-add-task')" :buttonText="showAddTask ? 'Close' : 'Add Task'"
+    <TaskButton v-show="homePage" @btn-click="$emit('toggle-add-task')" :buttonText="showAddTask ? 'Close' : 'Add Task'"
       class="button-default" />
   </header>
 </template>
@@ -18,6 +18,15 @@ export default {
     title: String,
     showAddTask: Boolean
   },
+  computed: {
+    homePage() {
+      if (this.$route.path === '/') {
+        return true
+      } else {
+        return false
+      }
+    }
+  }
 }
 </script>
 
