@@ -7,8 +7,8 @@
       <p>Deadline: {{ task.deadline }}</p>
     </div>
     <div class="btns">
-      <TaskButton class="button-default" buttonText='Update Task' />
-      <TaskButton @click="$emit('delete-task', task.id)" class="button-delete" buttonText='Delete Task' />
+      <TaskButton class="button-default" buttonText='Update' />
+      <TaskButton @click="$emit('delete-task', task.id)" class="button-delete" buttonText='Delete' />
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
 .wrapper {
 
   border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   padding: 10px 15px;
   margin: 10px;
   display: flex;

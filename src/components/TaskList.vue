@@ -1,4 +1,5 @@
 <template>
+  <p>All Tasks</p>
   <div v-for="task in tasks" v-bind:key="task.id">
     <TaskItem @toggle-priority="$emit('toggle-priority', task.id)" @delete-task="$emit('delete-task', task.id)"
       v-bind:task='task' />
@@ -18,3 +19,11 @@ export default {
   emits: ['delete-task', 'toggle-priority']
 }
 </script>
+
+<style scoped>
+p {
+  margin-left: 10px;
+  color: grey;
+  font-weight: 400;
+}
+</style>
