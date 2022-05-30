@@ -1,18 +1,24 @@
 <template>
   <header>
-    <h1>Task Manager</h1>
-    <TaskButton v-show="homePage" @btn-click="$emit('toggle-add-task')" :buttonText="showAddTask ? 'Close' : 'Add Task'"
-      class="button-default" />
+    <h2>Task Manager</h2>
+    <span>
+      <font-awesome-icon icon="user" />
+      <font-awesome-icon icon="gear" />
+    </span>
+
+
+    <!-- <TaskButton v-show="homePage" @btn-click="$emit('toggle-add-task')" :buttonText="showAddTask ? 'Close' : 'Add Task'"
+      class="button-default" /> -->
   </header>
 </template>
 
 <script>
-import TaskButton from './TaskButton.vue';
+// import TaskButton from './TaskButton.vue';
 
 export default {
   name: 'TaskHeader',
   components: {
-    TaskButton,
+    // TaskButton,
   },
   props: {
     title: String,
@@ -36,6 +42,9 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 1px solid black;
+}
+
+span *:first-child {
+  margin-right: 20px;
 }
 </style>

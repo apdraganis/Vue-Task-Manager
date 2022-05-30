@@ -1,7 +1,8 @@
 <template>
   <footer>
     <p>Copyright &copy; 2022</p>
-    <router-link to="/about">About</router-link>
+    <p>Coded by <a href="https://apdraganis.netlify.app/">Apostolos Draganis</a></p>
+    <!-- <router-link to="/about">About</router-link> -->
   </footer>
 </template>
 
@@ -11,5 +12,15 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
 </style>
