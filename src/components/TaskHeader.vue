@@ -5,10 +5,6 @@
       <font-awesome-icon icon="user" />
       <font-awesome-icon icon="gear" />
     </span>
-
-
-    <!-- <TaskButton v-show="homePage" @btn-click="$emit('toggle-add-task')" :buttonText="showAddTask ? 'Close' : 'Add Task'"
-      class="button-default" /> -->
   </header>
 </template>
 

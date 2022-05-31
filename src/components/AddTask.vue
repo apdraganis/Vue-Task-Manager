@@ -23,7 +23,7 @@ export default {
     return {
       text: '',
       day: '',
-      reminder: false
+      priority: false
     }
   },
   methods: {
@@ -43,9 +43,9 @@ export default {
 
       this.$emit('add-task', newTask)
 
-      this.text = '',
-        this.deadline = '',
-        this.priority = false
+      this.text = ''
+      this.deadline = ''
+      this.priority = false
     }
   }
 }
