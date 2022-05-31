@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import './style/style.scss'; // Is this good practice? 
 import TaskHeader from './components/TaskHeader.vue';
 import NavBar from './components/NavBar/NavBar.vue';
 

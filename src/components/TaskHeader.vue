@@ -1,21 +1,16 @@
 <template>
-  <header>
+  <nav>
     <h2>Task Manager</h2>
     <span>
-      <font-awesome-icon icon="user" />
-      <font-awesome-icon icon="gear" />
+      <font-awesome-icon class="nav-icon" icon="user" />
+      <font-awesome-icon class="nav-icon" icon="gear" />
     </span>
-  </header>
+  </nav>
 </template>
 
 <script>
-// import TaskButton from './TaskButton.vue';
-
 export default {
   name: 'TaskHeader',
-  components: {
-    // TaskButton,
-  },
   props: {
     title: String,
     showAddTask: Boolean
@@ -28,19 +23,14 @@ export default {
         return false
       }
     }
+  },
+  methods: {
+    login() {
+      this.$auth0.loginWithRedirect();
+    },
+    logout() {
+      this.$auth0.logout({ returnTo: window.location.origin });
+    }
   }
-}
+};
 </script>
-
-<style scoped>
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-span *:first-child {
-  margin-right: 20px;
-}
-</style>

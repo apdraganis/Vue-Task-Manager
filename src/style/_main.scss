@@ -1,0 +1,36 @@
+main {
+  height: 340px;
+
+  .wrapper {
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 6px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+    >:first-child>* {
+      margin: 0px;
+
+    }
+
+    h4 {
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    p {
+      margin-top: 5px !important;
+      color: rgb(128, 128, 128);
+      font-style: italic;
+    }
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(128, 128, 128);
+  }
+}
