@@ -1,10 +1,11 @@
 <template>
-  <AddTask v-show="showAddTask" @add-task="addTask" />
+
   <TaskList mode="home" @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
+  <AddTask v-show="showAddTask" @add-task="addTask" />
 </template>
 
 <script>
-import TaskList from '../components/TaskList.vue';
+import TaskList from '../components/Tasks/TaskList.vue';
 import AddTask from '../components/AddTask.vue';
 
 export default {

@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import TaskList from '../components/TaskList.vue';
+import TaskList from '../components/Tasks/TaskList.vue';
 import AddTask from '../components/AddTask.vue';
 
 export default {

@@ -3,8 +3,6 @@
 </template>
 
 <script>
-import '../style/style.scss';
-
 export default {
   name: 'TaskButton',
   props: {
@@ -20,6 +18,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

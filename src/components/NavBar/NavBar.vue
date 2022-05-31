@@ -1,20 +1,22 @@
 <template>
-  <ul>
-    <li>
-      <router-link style="text-decoration: none; color: inherit;" to="/">
-        <font-awesome-icon icon="house" />
-      </router-link>
-    </li>
-    <li id="addtask">
-      <AddButton @toggle-add-task="$emit('toggle-add-task')" />
-      <!-- <TaskButton @btn-click="$emit('toggle-add-task')" /> -->
-    </li>
-    <li>
-      <router-link style="text-decoration: none; color: inherit;" to="/favorites">
-        <font-awesome-icon icon="star" />
-      </router-link>
-    </li>
-  </ul>
+  <footer>
+    <ul>
+      <li>
+        <router-link style="text-decoration: none; color: inherit;" to="/">
+          <font-awesome-icon icon="house" />
+        </router-link>
+      </li>
+      <li id="addtask">
+        <AddButton @toggle-add-task="$emit('toggle-add-task')" />
+        <!-- <TaskButton @btn-click="$emit('toggle-add-task')" /> -->
+      </li>
+      <li>
+        <router-link style="text-decoration: none; color: inherit;" to="/favorites">
+          <font-awesome-icon icon="star" />
+        </router-link>
+      </li>
+    </ul>
+  </footer>
 </template>
 
 <script>
