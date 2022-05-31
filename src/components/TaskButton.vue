@@ -11,6 +11,7 @@ export default {
     buttonText: {
       type: String,
     },
+
   },
   methods: {
     onClick() {

@@ -4,7 +4,8 @@
       <font-awesome-icon icon="house" />
     </li>
     <li id="addtask">
-      <font-awesome-icon icon="circle-plus" />
+      <AddButton @toggle-add-task="$emit('toggle-add-task')" />
+      <!-- <TaskButton @btn-click="$emit('toggle-add-task')" /> -->
     </li>
     <li>
       <font-awesome-icon icon="star" />
@@ -13,8 +14,13 @@
 </template>
 
 <script>
+import AddButton from './AddButton.vue';
+
 export default {
   name: 'NavBar',
+  components: {
+    AddButton
+  }
 }
 </script>
 
@@ -32,9 +38,16 @@ ul {
 li#addtask>* {
   color: #6577B3;
   font-size: 35px;
+  border: none;
 }
 
 li>* {
   font-size: 25px;
+  cursor: pointer;
+}
+
+li>*:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 </style>

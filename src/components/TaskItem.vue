@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <div>
-      <h3 @dblclick="$emit('toggle-priority', task.id)" :class="task.priority === true ? 'priority-task' : ''">{{
+      <h4 @dblclick="$emit('toggle-priority', task.id)" :class="task.priority === true ? 'priority-task' : ''">{{
           task.text
-      }}</h3>
+      }}</h4>
       <p>Deadline: {{ task.deadline }}</p>
     </div>
     <div class="btns">
@@ -39,7 +39,7 @@ export default {
   justify-content: space-between;
 }
 
-h3 {
+h4 {
   margin-top: 0px;
   cursor: pointer;
   user-select: none;

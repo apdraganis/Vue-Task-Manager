@@ -1,6 +1,12 @@
 {
   "tasks": [
     {
+      "id": "3",
+      "text": "Arrange dentist appointment",
+      "deadline": "May 27th",
+      "priority": false
+    },
+    {
       "text": "Study for exams",
       "deadline": "2022-05-03",
       "priority": false,
@@ -11,12 +17,6 @@
       "deadline": "2022-05-06",
       "id": 3122,
       "priority": false
-    },
-    {
-      "text": "Arrange Dentist Appointment",
-      "deadline": "2022-05-01",
-      "priority": true,
-      "id": 3124
     }
   ]
 }
