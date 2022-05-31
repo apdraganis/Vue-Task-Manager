@@ -1,6 +1,6 @@
 <template>
   <AddTask v-show="showAddTask" @add-task="addTask" />
-  <TaskList mode="home" @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
+  <TaskList mode="favorites" @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
 </template>
 
 <script>

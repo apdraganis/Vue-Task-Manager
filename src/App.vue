@@ -8,7 +8,7 @@
 
 <script>
 import TaskHeader from './components/TaskHeader.vue';
-import NavBar from './components/NavBar.vue';
+import NavBar from './components/NavBar/NavBar.vue';
 
 export default {
   name: 'App',
