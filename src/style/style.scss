@@ -3,25 +3,18 @@
 @use 'main';
 @use 'form-add';
 
-$default-button-color: #6577B3;
-$hover-default-button-color: #6577b3c7;
-$delete-button-color: #b33f41;
-$hover-delete-button-color: #b33f41cb;
-$submit-button-color: rgb(194, 194, 194);
-$hover-submit-button-color: rgb(206, 206, 206);
 
-// DONT FORGET: create mixins
-@mixin button-default($background-color, $hover-backrgound-color) {
-  background-color: $background-color;
-  color: rgb(234, 250, 250);
-  padding: 8px 10px;
-  border: none;
-  border-radius: 6px;
-  width: 80px;
-  cursor: pointer;
 
-  &:hover {
-    background-color: $hover-backrgound-color;
+.darkTheme {
+  background-color: #0d1f52 !important;
+  color: #f8fafd;
+
+  .priority-task {
+    border: 0.5px solid #f8fafd;
+  }
+
+  .form-add {
+    box-shadow: rgb(255, 255, 255) 0px 0px 4px;
   }
 }
 
@@ -38,14 +31,6 @@ $hover-submit-button-color: rgb(206, 206, 206);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.button-default {
-  @include button-default($default-button-color, $hover-default-button-color);
-}
-
-.button-delete {
-  @include button-default($delete-button-color, $hover-delete-button-color);
-}
-
 .priority-task {
-  color: rgb(240, 0, 0);
+  border: 0.5px solid #0d1f52;
 }

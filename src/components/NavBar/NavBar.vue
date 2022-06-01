@@ -8,7 +8,6 @@
       </li>
       <li id="addtask">
         <AddButton @toggle-add-task="$emit('toggle-add-task')" />
-        <!-- <TaskButton @btn-click="$emit('toggle-add-task')" /> -->
       </li>
       <li>
         <router-link @click="$emit('close-add-task')" style="text-decoration: none; color: inherit;" to="/favorites">

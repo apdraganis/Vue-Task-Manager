@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <TaskHeader />
+  <div class="container" v-bind:class="{ darkTheme: darkTheme }">
+    <TaskHeader @toggle-theme="toggleTheme" />
     <router-view :showAddTask="showAddTask"></router-view>
     <NavBar @close-add-task="closeAddTask" @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" />
   </div>
@@ -19,12 +19,16 @@ export default {
   },
   data() {
     return {
-      showAddTask: false
+      showAddTask: false,
+      darkTheme: false
     }
   },
   methods: {
     toggleAddTask() {
       this.showAddTask = !this.showAddTask
+    },
+    toggleTheme() {
+      this.darkTheme = !this.darkTheme
     },
     closeAddTask() {
       this.showAddTask = false

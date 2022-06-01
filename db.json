@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "text": "Study for exams",
-      "deadline": "2022-05-03",
-      "priority": false,
-      "id": 3121
-    },
-    {
       "text": "Read Book",
       "deadline": "2022-05-06",
       "id": 3122,
@@ -21,7 +15,7 @@
     {
       "text": "ss",
       "deadline": "2022-05-29",
-      "priority": true,
+      "priority": false,
       "id": 3126
     }
   ]
