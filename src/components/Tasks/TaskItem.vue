@@ -1,15 +1,15 @@
 <template>
-  <div class="wrapper">
+  <li class="item-wrapper">
     <div>
       <h4 @dblclick="$emit('toggle-priority', task.id)" :class="task.priority === true ? 'priority-task' : ''">{{
           task.text
       }}</h4>
       <p>Deadline: {{ task.deadline }}</p>
     </div>
-    <div class="btns">
-      <font-awesome-icon icon="trash-can" />
+    <div id="btn-delete">
+      <font-awesome-icon @click="$emit('delete-task')" icon="trash-can" />
     </div>
-  </div>
+  </li>
 </template>
 
 
@@ -26,11 +26,3 @@ export default {
   // },
 }
 </script>
-
-<style scoped>
-/* .btns {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-} */
-</style>

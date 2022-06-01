@@ -10,19 +10,13 @@
       "text": "Read Book",
       "deadline": "2022-05-06",
       "id": 3122,
-      "priority": true
+      "priority": false
     },
     {
       "text": "Arrange Dentist Appointment",
       "deadline": "2022-05-01",
       "priority": true,
       "id": 3124
-    },
-    {
-      "text": "Meal Prep",
-      "deadline": "2022-06-07",
-      "priority": false,
-      "id": 3125
     }
   ]
 }
