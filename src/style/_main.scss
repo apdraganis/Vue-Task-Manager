@@ -1,7 +1,13 @@
 main {
   height: 340px;
 
-  .wrapper {
+  .item-list {
+    height: 300px;
+    padding: 0px;
+    overflow: auto;
+  }
+
+  .item-wrapper {
     border-radius: 12px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 6px;
     padding: 10px 15px;
@@ -26,6 +32,14 @@ main {
       margin-top: 5px !important;
       color: rgb(128, 128, 128);
       font-style: italic;
+    }
+
+    #btn-delete {
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(240, 0, 0);
+      }
     }
   }
 
