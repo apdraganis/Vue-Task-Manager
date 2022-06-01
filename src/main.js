@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGear, faUser, faStar, faHouse, faCirclePlus, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { faGear, faUser, faStar, faHouse, faCirclePlus, faTrashCan, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faGear, faUser, faCirclePlus, faStar, faHouse, faTrashCan);
+library.add(faGear, faUser, faCirclePlus, faStar, faHouse, faTrashCan, faSun);
 
 import { createAuth0 } from '@auth0/auth0-vue';
 
