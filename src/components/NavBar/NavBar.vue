@@ -2,7 +2,7 @@
   <footer>
     <ul>
       <li>
-        <router-link style="text-decoration: none; color: inherit;" to="/">
+        <router-link @click="$emit('close-add-task')" style="text-decoration: none; color: inherit;" to="/">
           <font-awesome-icon icon="house" />
         </router-link>
       </li>
@@ -11,7 +11,7 @@
         <!-- <TaskButton @btn-click="$emit('toggle-add-task')" /> -->
       </li>
       <li>
-        <router-link style="text-decoration: none; color: inherit;" to="/favorites">
+        <router-link @click="$emit('close-add-task')" style="text-decoration: none; color: inherit;" to="/favorites">
           <font-awesome-icon icon="star" />
         </router-link>
       </li>
@@ -26,7 +26,7 @@ export default {
   name: 'NavBar',
   components: {
     AddButton
-  }
+  },
 }
 </script>
 

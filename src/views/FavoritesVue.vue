@@ -1,6 +1,7 @@
 <template>
-  <AddTask v-show="showAddTask" @add-task="addTask" />
+
   <TaskList mode="favorites" @toggle-priority="togglePriority" @delete-task="deleteTask" v-bind:tasks="tasks" />
+  <AddTask v-show="showAddTask" @add-task="addTask" />
 </template>
 
 <script>
