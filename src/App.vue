@@ -2,7 +2,7 @@
   <div class="container">
     <TaskHeader />
     <router-view :showAddTask="showAddTask"></router-view>
-    <NavBar @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" />
+    <NavBar @close-add-task="closeAddTask" @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" />
   </div>
 </template>
 
@@ -25,6 +25,9 @@ export default {
   methods: {
     toggleAddTask() {
       this.showAddTask = !this.showAddTask
+    },
+    closeAddTask() {
+      this.showAddTask = false
     }
   },
 }

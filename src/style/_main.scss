@@ -1,8 +1,11 @@
 main {
-  height: 340px;
+  max-height: 340px;
+  height: fit-content;
+  margin-bottom: 10px;
 
   .item-list {
-    height: 300px;
+    max-height: 300px;
+    height: fit-content;
     padding: 0px;
     overflow: auto;
   }

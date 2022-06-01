@@ -8,7 +8,7 @@
       <label>Deadline</label>
       <input type="date" name="deadline" v-model="deadline" />
     </div>
-    <div>
+    <div id="priority-task">
       <label>Is this a high priorty task?</label>
       <input type="checkbox" name="priority" v-model="priority">
     </div>
