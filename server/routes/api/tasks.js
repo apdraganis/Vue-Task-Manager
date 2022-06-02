@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongodb = require('mongodb');
 
-const dbUrl = "mongodb+srv://first-user:8yDNyd0ScGUWSKjJ@cluster0.msahg.mongodb.net/Project0?retryWrites=true&w=majority";
+const dbUrl = ""
 
 
 // Get Posts
