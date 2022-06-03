@@ -8,9 +8,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-
 const tasks = require('./routes/api/tasks');
-// app.use('/api/tasks', tasks);
+app.use('/api/tasks', tasks);
 
 
 

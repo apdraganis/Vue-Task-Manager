@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       text: '',
-      day: '',
+      deadline: '',
       priority: false
     }
   },
@@ -30,16 +30,18 @@ export default {
     onSubmit(event) {
       event.preventDefault()
 
-      if (!this.text) {
-        alert('Please add a task')
+      if ((!this.text) || (!this.deadline)) {
+        alert('Task title or deadline missing...')
         return
       }
 
       const newTask = {
         text: this.text,
         deadline: this.deadline,
-        priority: this.priority
+        priority: false
       }
+
+      console.log(JSON.stringify(newTask))
 
       this.$emit('add-task', newTask)
 
