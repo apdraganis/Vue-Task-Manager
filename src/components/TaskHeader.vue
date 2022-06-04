@@ -1,10 +1,10 @@
 <template>
-  <nav>
+  <header>
     <h2>Task Manager</h2>
     <span>
-      <font-awesome-icon @click="$emit('toggle-theme')" class="nav-icon" icon="sun" />
+      <font-awesome-icon @click="$emit('toggle-theme')" class="head-icon" icon="sun" />
     </span>
-  </nav>
+  </header>
 </template>
 
 <script>
@@ -15,14 +15,14 @@ export default {
     showAddTask: Boolean,
     darkTheme: Boolean
   },
-  computed: {
-    homePage() {
-      if (this.$route.path === '/') {
-        return true
-      } else {
-        return false
-      }
-    }
-  },
+  // computed: {
+  //   homePage() {
+  //     if (this.$route.path === '/') {
+  //       return true
+  //     } else {
+  //       return false
+  //     }
+  //   }
+  // },
 };
 </script>

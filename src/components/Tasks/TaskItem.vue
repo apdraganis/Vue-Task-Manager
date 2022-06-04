@@ -14,15 +14,10 @@
 
 
 <script>
-// import TaskButton from './TaskButton.vue';
-
 export default {
   name: 'TaskItem',
   props: {
     task: Object
   },
-  // components: {
-  //   TaskButton,
-  // },
 }
 </script>

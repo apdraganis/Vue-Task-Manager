@@ -1,10 +1,10 @@
-nav {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
 
-  .nav-icon {
+  .head-icon {
     font-size: 22px;
 
     &:hover {
@@ -12,9 +12,5 @@ nav {
       transform: scale(1.2);
       transition: 0.3s;
     }
-  }
-
-  span>:first-child {
-    margin-right: 15px;
   }
 }
