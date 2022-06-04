@@ -3,12 +3,12 @@
     <p v-if="mode === 'home'">All Tasks</p>
     <p v-else-if="mode === 'favorites'">High Priority Tasks</p>
     <ul class="item-list" v-show="mode === 'home'">
-      <TaskItem v-for="task in tasks" v-bind:key="task.id" @toggle-priority="$emit('toggle-priority', task.id)"
+      <TaskItem v-for="task in tasks" v-bind:key="task._id" @toggle-priority="$emit('toggle-priority', task._id)"
         @delete-task="$emit('delete-task', task._id)" v-bind:task='task' />
     </ul>
     <ul class="item-list" v-show="mode === 'favorites'">
-      <TaskItem v-for="task in tasks" v-show="task.priority" v-bind:key="task.id"
-        @toggle-priority="$emit('toggle-priority', task._id)" @delete-task="$emit('delete-task', task.id)"
+      <TaskItem v-for="task in tasks" v-show="task.priority" v-bind:key="task._id"
+        @toggle-priority="$emit('toggle-priority', task._id)" @delete-task="$emit('delete-task', task._id)"
         v-bind:task='task' />
     </ul>
   </main>

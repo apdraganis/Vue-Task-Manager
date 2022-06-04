@@ -38,10 +38,8 @@ export default {
       const newTask = {
         text: this.text,
         deadline: this.deadline,
-        priority: false
+        priority: this.priority
       }
-
-      console.log(JSON.stringify(newTask))
 
       this.$emit('add-task', newTask)
 

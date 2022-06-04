@@ -1,6 +1,8 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser'); // parse json data
 const cors = require('cors');
+const dbUrl = "";
 
 const app = express();
 
@@ -8,8 +10,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const tasks = require('./routes/api/tasks');
-app.use('/api/tasks', tasks);
+mongoose.connect(dbUrl)
+  .then(() => {
+    console.log('DB Connected via Mongoose!')
+  })
+  .catch(err => console.log(err));
+
+const TasksRoute = require('./routes/tasks');
+app.use('/tasks', TasksRoute);
 
 
 
