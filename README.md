@@ -1,4 +1,4 @@
-# Vue - Task Manager
+# MEVN - Task Manager
 
 ## Project setup
 ```
@@ -10,9 +10,9 @@ npm install
 npm run serve
 ```
 
-### Run backend (json-server)
+### Run backend (from ./server)
 ```
-npm run jserver
+npm run dev
 ```
 
 ### Compiles and minifies for production
