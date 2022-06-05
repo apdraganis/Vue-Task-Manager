@@ -1,8 +1,12 @@
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config();
+};
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser'); // parse json data
 const cors = require('cors');
-const dbUrl = "";
+const dbUrl = process.env.DB_URL;
 
 const app = express();
 
@@ -20,6 +24,16 @@ const TasksRoute = require('./routes/tasks');
 app.use('/tasks', TasksRoute);
 
 
+// Production
+if (process.env.NODE_ENV === 'production') {
+  // Static folder
+  app.use(express.static(__dirname + '/dist/'))
+
+  // Handle SPA routes
+  app.get(/.*/, (req, res) => {
+    res.sendFile(__dirname + '/dist/index.html');
+  })
+}
 
 
 const port = process.env.PORT || 5000;
