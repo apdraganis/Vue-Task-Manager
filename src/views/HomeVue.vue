@@ -61,7 +61,7 @@ export default {
         task._id === id ? { ...task, priority: data.priority } : task)
     },
     async fetchTasks() {
-      const response = await fetch('/tasks');
+      const response = await fetch('http://localhost:5000/tasks');
       const data = await response.json();
 
       return data;

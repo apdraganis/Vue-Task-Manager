@@ -24,17 +24,5 @@ const TasksRoute = require('./routes/tasks');
 app.use('/tasks', TasksRoute);
 
 
-// Production
-if (process.env.NODE_ENV === 'production') {
-  // Static folder
-  app.use(express.static(__dirname + '/dist/'))
-
-  // Handle SPA routes
-  app.get(/.*/, (req, res) => {
-    res.sendFile(__dirname + '/dist/index.html');
-  })
-}
-
-
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
