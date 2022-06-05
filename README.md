@@ -1,5 +1,11 @@
 # MEVN - Task Manager
 
+
+![App Image](/assets/mevn1.png)
+
+
+
+
 ## Project setup
 ```
 npm install
