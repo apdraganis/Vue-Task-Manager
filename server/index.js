@@ -1,8 +1,12 @@
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config();
+};
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser'); // parse json data
 const cors = require('cors');
-const dbUrl = "";
+const dbUrl = process.env.DB_URL;
 
 const app = express();
 
@@ -18,8 +22,6 @@ mongoose.connect(dbUrl)
 
 const TasksRoute = require('./routes/tasks');
 app.use('/tasks', TasksRoute);
-
-
 
 
 const port = process.env.PORT || 5000;
