@@ -20,7 +20,7 @@ mongoose.connect(dbUrl)
   })
   .catch(err => console.log(err));
 
-const TasksRoute = require('./routes/tasks');
+const TasksRoute = require('./server/routes/tasks');
 app.use('/tasks', TasksRoute);
 
 
